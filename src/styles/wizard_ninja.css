@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #000;
+}
+
+/* .content {
+  position: relative;
+} */
+
+.content {
+  position: absolute;
+  /* opacity: 0; */
+  transition: opacity 0.5s ease;
+
+  width: 100%;
+  height: 100%;
+  top: 100vh;
+}
+
+.content.animate {
+  animation: fadeIn 3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.content h2 {
+  position: absolute;
+}
+
+.wizard h2 {
+  top: 3rem;
+  left: 2rem;
+}
+
+.ninja h2 {
+  text-align: right;
+  top: 25rem;
+  right: 2rem;
+}
+
+.wizard .text-1 {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+
+.wizard .text-2 {
+  color: white;
+  animation: 2s wizard-animation linear paused;
+}
+
+.ninja .text-1 {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+
+.ninja .text-2 {
+  color: white;
+  animation: 2s ninja-animation linear paused;
+  animation-fill-mode: forwards;
+}
+
+.animate {
+  animation-play-state: running;
+}
+
+@keyframes wizard-animation {
+  0% {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 200% 0%, 0% 200%);
+  }
+}
+
+@keyframes ninja-animation {
+  0% {
+    clip-path: polygon(0% 0%, 200% 0%, 0% 200%);
+  }
+  50% {
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 0% 0%, 0% 0%);
+  }
+}
+
+/* SCREEN SIZES */
+
+@media screen and (max-width: 600px) {
+  .content h2 {
+    font-size: 4em;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 700px) {
+  .content h2 {
+    font-size: 5em;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 800px) {
+  .content h2 {
+    font-size: 6em;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+  .content h2 {
+    font-size: 7em;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1300px) {
+  .content h2 {
+    font-size: 8em;
+  }
+}
+
+@media screen and (min-width: 1301px) {
+  .content h2 {
+    font-size: 9em;
+  }
+}

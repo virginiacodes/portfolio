@@ -1,0 +1,49 @@
+.nav-container {
+  color: white;
+}
+
+.logo {
+  padding-right: 20%;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.nav-item {
+  display: inline-block;
+  position: relative;
+}
+
+.fa-brands {
+  padding: 10px;
+}
+
+.fa-brands:hover {
+  color: rgb(193, 192, 192);
+  transform: scale(1.1);
+}
+
+/* Underline animation */
+
+.nav-item::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
